@@ -1,13 +1,20 @@
 .card {
-    width: 80%;
+    width: 70%;
+    background-color: rgb(0, 0, 0) !important;
     /* height: 70vh; */
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
     border-radius: 100px;
-    background-color: white;
+    /* background-color: white; */
     /* display: flex;
     justify-self: center; */
     /* justify-content: center; */
-    margin-bottom: 300px;
+    /* margin-bottom: 300px; */
     padding: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .graphic {
@@ -15,13 +22,39 @@
     /* width: 80%; */
 
     /* height: 100%; */
-    background-color: blue;
+    /* background-color: blue; */
+    text-align: center;
+    padding-bottom: 30px;
     /* margin-left: auto;
     margin-right: auto; */
 }
 
 .text {
-    background-color: pink;
+    /* background-color: pink; */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text h1 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.text h3 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.text p {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.text Button {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .pic {
@@ -32,11 +65,10 @@
     width: 50vh;
     height: 50vh;
     object-fit: cover;
-    margin-left: 20%;
+    border-radius: 10%;
 }
 
 .vid {
-    /* margin-top: 10vh; */
-    margin-left: 10%;
-    position: center;
+    margin-left: auto;
+    margin-right: auto;
 }

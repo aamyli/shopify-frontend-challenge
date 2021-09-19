@@ -111,7 +111,7 @@ function App() {
       </a>
 
       <a id="gallery">
-        <div>
+        <div className="photos">
           {result.map((res, index) => (
             <PhotoCard
               key={index}
@@ -125,6 +125,8 @@ function App() {
           ))}
         </div>
       </a>
+
+      <div className="footer"></div>
     </div>
   );
 }

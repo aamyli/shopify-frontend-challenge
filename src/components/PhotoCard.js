@@ -4,6 +4,7 @@ import { useState } from 'react';
 import "../styles/photocard.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Button } from 'react-bootstrap';
 
 
 const img = "image"
@@ -18,40 +19,31 @@ const PhotoCard = ({ title, date, desc, type, url, liked }) => {
     ]);
 
   return (
-    <container-fluid>
-        <Row className="card">
-            <Col lg={6} className="graphic">
-                <div>
-                    { type == img ? (
-                        <img className="pic" src={url}></img>
-                    ) : (
-                        <ReactPlayer className="vid" url={url}/>
-                    )}
-                </div>
-            </Col>
-            <Col lg={6} className="text">
-                <div>
-                    <h1>{title}</h1>
-                    <h3>{date}</h3>
-                    <p>{desc}</p>
-                    <button onClick={() => setLike({hasLiked: !like.hasLiked})}> 
-                    {
-                        like.hasLiked ? (
-                            <p>unlike</p>
-                        ) : (
-                            <p>like</p>
-                        )
-                    }
-                    </button>
-                    {/* <p>liked: {liked}</p> */}
-                </div>
-            </Col>
-        </Row>
-    </container-fluid>
-    // <div className="card" >
-
-
-    // </div>
+    <div className="card">
+        <div className="graphic">
+            { type == img ? (
+                <img className="pic" src={url}></img>
+            ) : (
+                <ReactPlayer className="vid" url={url}/>
+            )}
+        </div>
+        <div className="text">
+            <h1>{title}</h1>
+            <h3>{date} | <a href={url}><i>view full</i></a></h3>
+            <p>{desc}</p>
+            <br />
+            <Button variant="light" onClick={() => setLike({hasLiked: !like.hasLiked})}> 
+            {
+                like.hasLiked ? (
+                    <p>unlike 💔</p>
+                ) : (
+                    <p>like ❤️</p>
+                )
+            }
+            </Button>
+            {/* <p>liked: {liked}</p> */}
+        </div>
+    </div>
   )
 }
 
