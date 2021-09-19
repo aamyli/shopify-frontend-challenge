@@ -1,38 +1,73 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black;
   color: white;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  color: white !important;
+  text-decoration: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* for landing page */
+
+.nasa {
+  font-weight: 200;
+  font-size: 80px;
+  text-align: right;
+  opacity: 30%;
+  margin-bottom: 0;
+}
+
+.credit {
+  font-weight: 200;
+  font-size: 16px;
+  text-align: right;
+  opacity: 80%;
+}
+
+.title {
+  height: 100vh;
+}
+
+.quote {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20vh;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.focus {
+  font-size: 17px;
+}
+
+.author {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.scroll {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+/* for #start section */
+
+.date-picker {
+  height: 100vh;
+}
+
+.instructions {
+  padding-top: 10vh;
+}
+.calendar {
+  text-align: center;
+  color: gray;
+}
+
+.date-button {
+  margin-top: 15px;
 }

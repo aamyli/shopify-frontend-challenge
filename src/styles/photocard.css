@@ -1,0 +1,42 @@
+.card {
+    width: 80%;
+    /* height: 70vh; */
+    border-radius: 100px;
+    background-color: white;
+    /* display: flex;
+    justify-self: center; */
+    /* justify-content: center; */
+    margin-bottom: 300px;
+    padding: 50px;
+}
+
+.graphic {
+    /* padding-top: 10vh; */
+    /* width: 80%; */
+
+    /* height: 100%; */
+    background-color: blue;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.text {
+    background-color: pink;
+}
+
+.pic {
+    /* max-width: 70%;
+    max-height: 70vh; */
+    /* width: 50vh;
+    height: 50vh; */
+    width: 50vh;
+    height: 50vh;
+    object-fit: cover;
+    margin-left: 20%;
+}
+
+.vid {
+    /* margin-top: 10vh; */
+    margin-left: 10%;
+    position: center;
+}
