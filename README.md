@@ -32,8 +32,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features
 - Pulls data from one of NASA's APIs (APOD)
-- Displays each image/video returned along with a description
-- Description includes a title, date, description, and url to the full image/video.
+- Displays each image/video returned along with a description. 
+  - A reusable PhotoCard component was made, and the API results were mapped back into the component.
+- Description includes a title, date, description, and clickable url to the full image/video.
 - Each image/video can be liked and unliked
 - (EXTRA) The user can select a date range to pull data from, through an interactive calendar. 
 
