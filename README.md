@@ -53,6 +53,9 @@ The demo can be accessed at [aamyli.github.io/shopify-frontend-challenge](https:
 ![gallery page](https://github.com/aamyli/shopify-frontend-challenge/blob/master/src/assets/demo-3.png?raw=true)
 ![gallery unlike](https://github.com/aamyli/shopify-frontend-challenge/blob/master/src/assets/demo-4.png?raw=true)
 
+### 3.1 videos are supported as well
+![gallery video](https://github.com/aamyli/shopify-frontend-challenge/blob/master/src/assets/demo-5.png?raw=true)
+
 ## Getting Started
 
 1. Clone this git repository ([React](https://reactjs.org/) is needed to run this application locally)!
