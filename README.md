@@ -28,7 +28,7 @@ This project is for the Shopify Frontend Developer Intern Challenge, Winter 2022
 
 Following the prompt, this project is a simple user interface that pulls images from the [NASA APOD API](https://api.nasa.gov/#apod), allowing the users to "like" and "unlike" their favourite images. The user can select a date range for which they want to query for.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), built with the help of various npm packages, and deployed on Github Pages.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), built with the help of npm packages, and deployed on Github Pages.
 
 ## Features
 - Pulls data from one of NASA's APIs (APOD)
@@ -37,13 +37,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Each image/video can be liked and unliked
 - (EXTRA) The user can select a date range to pull data from, through an interactive calendar. 
 
-The webpage, in both its visuals and flow, has been designed with the feelings of simplicity and serenity in mind.
+The webpage, in both its visuals and flow, has been designed to reflect the grand and serene feelings associated with space.
 
 ## Demo
 
-The demo can be accessed at (to add link)
+The demo can be accessed at [aamyli.github.io/shopify-frontend-challenge](https://aamyli.github.io/shopify-frontend-challenge/)
 
-to add photos here
+### 1. the landing page -- click enter!
+![home page](https://github.com/aamyli/shopify-frontend-challenge/blob/master/src/assets/demo-1.png?raw=true)
+
+### 2. select a date range and click go!
+![start page](https://github.com/aamyli/shopify-frontend-challenge/blob/master/src/assets/demo-2.png?raw=true)
+
+### 3. you can scroll through all of the photos, and like/unlike each one (:
+![gallery page](https://github.com/aamyli/shopify-frontend-challenge/blob/master/src/assets/demo-3.png?raw=true)
+![gallery unlike](https://github.com/aamyli/shopify-frontend-challenge/blob/master/src/assets/demo-4.png?raw=true)
 
 ## Getting Started
 
