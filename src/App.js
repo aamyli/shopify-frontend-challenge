@@ -20,10 +20,15 @@ async function fetchAPI(startDate, endDate) {
   const startFormat = startDate.toISOString().slice(0, 10);
   const endFormat = endDate.toISOString().slice(0, 10);
   const url = "https://api.nasa.gov/planetary/apod?api_key=" + API_KEY + "&start_date=" + startFormat + "&end_date=" + endFormat;
-  console.log(url);
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  }
+  catch(error) {
+    console.log(error);
+    return null;
+  }
 } 
 
 function App() {
@@ -51,27 +56,28 @@ function App() {
   // when button is triggered, the API is called and results are updated
   function updateResult() {
     fetchAPI(date[0].startDate, date[0].endDate).then(data => {
-      const parsed_results = [];
-      data.forEach((d) => {
-        const res = {
-          title: d.title,
-          date: d.date,
-          desc: d.explanation,
-          type: d.media_type,
-          url: d.url,
-          liked: false
-        }
-        parsed_results.push(res);
-      });
-      
-      setResult(parsed_results);
-      console.log(result);
+      if (data != null) {
+        const parsed_results = [];
+        data.forEach((d) => {
+          const res = {
+            title: d.title,
+            date: d.date,
+            desc: d.explanation,
+            type: d.media_type,
+            url: d.url,
+            liked: false
+          }
+          parsed_results.push(res);
+        });
+        
+        setResult(parsed_results);
+        console.log(result);
+      }
     })
   }
 
   return (
     <div className="App">
-      
       <div className="title">
         <h1 className="nasa">NASA/<b>SPACESTAGRAM</b></h1>
         <p className="credit">📸 photos taken from <b><a href="https://api.nasa.gov/#apod">NASA's APOD API</a></b></p>
@@ -112,9 +118,7 @@ function App() {
 
       <a id="gallery">
         <div className="photos">
-          { result[0].title == null ? (
-            <div></div>
-          ) : (
+          { result[0] && result[0].title != null ? (
             result.map((res, index) => (
               <PhotoCard
                 key={index}
@@ -126,6 +130,8 @@ function App() {
                 liked={res.liked}
               ></PhotoCard>
             ))
+          ) : (
+            <div></div>
           )
           }
         </div>
@@ -137,10 +143,3 @@ function App() {
 }
 
 export default App;
-
-      {/* <p> start date : {JSON.stringify(date[0].startDate)} </p>
-      <p> end date : {JSON.stringify(date[0].endDate)} </p> */}
-
-      {/* <FetchImage></FetchImage> */}
-      {/* <button onClick={buttonState}> Get Pictures </button> */}
-      {/* <p> result : {JSON.stringify(result)} </p> */}
