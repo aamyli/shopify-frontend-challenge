@@ -112,17 +112,22 @@ function App() {
 
       <a id="gallery">
         <div className="photos">
-          {result.map((res, index) => (
-            <PhotoCard
-              key={index}
-              title={res.title}
-              date={res.date}
-              desc={res.desc}
-              type={res.type}
-              url={res.url}
-              liked={res.liked}
-            ></PhotoCard>
-          ))}
+          { result[0] == null ? (
+            <div></div>
+          ) : (
+            result.map((res, index) => (
+              <PhotoCard
+                key={index}
+                title={res.title}
+                date={res.date}
+                desc={res.desc}
+                type={res.type}
+                url={res.url}
+                liked={res.liked}
+              ></PhotoCard>
+            ))
+          )
+          }
         </div>
       </a>
 

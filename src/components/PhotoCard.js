@@ -29,7 +29,7 @@ const PhotoCard = ({ title, date, desc, type, url, liked }) => {
         </div>
         <div className="text">
             <h1>{title}</h1>
-            <h3>{date} | <a href={url}><i>view full</i></a></h3>
+            <h3>{date} | <a href={url}><i>🔗 to view full</i></a></h3>
             <p>{desc}</p>
             <br />
             <Button variant="light" onClick={() => setLike({hasLiked: !like.hasLiked})}> 
@@ -41,7 +41,7 @@ const PhotoCard = ({ title, date, desc, type, url, liked }) => {
                 )
             }
             </Button>
-            {/* <p>liked: {liked}</p> */}
+            <p className="divider">- - ✨ - -</p>
         </div>
     </div>
   )
