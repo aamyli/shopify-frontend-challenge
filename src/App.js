@@ -112,7 +112,7 @@ function App() {
 
       <a id="gallery">
         <div className="photos">
-          { result[0] == null ? (
+          { result[0].title == null ? (
             <div></div>
           ) : (
             result.map((res, index) => (
